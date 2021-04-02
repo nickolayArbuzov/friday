@@ -2,7 +2,7 @@
   "name": "friday",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://djan2003.github.io/friday",
+  "homepage": "https://nickolayArbuzov.github.io/friday",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
