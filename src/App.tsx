@@ -1,19 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {TestPage} from "./TestPage/TestPage";
-import {Redirect, Route, Switch } from 'react-router-dom';
-import { LoginPage } from './Login/LoginPage';
-import {NewPasswordPage} from "./NewPassword/NewPasswordPage";
-import {PasswordRecoveryPage} from "./PasswordRecovery/PasswordRecoveryPage";
-import {ProfilePage} from "./Profile/ProfilePage";
-import {RegistrationPage} from "./Registration/RegistrationPage";
+import {Redirect, Route, Switch} from 'react-router-dom';
+import {LoginPage} from './UI/Login/LoginPage';
+import {NewPasswordPage} from "./UI/NewPassword/NewPasswordPage";
+import {PasswordRecoveryPage} from "./UI/PasswordRecovery/PasswordRecoveryPage";
+import {ProfilePage} from "./UI/Profile/ProfilePage";
+import {RegistrationPage} from "./UI/Registration/RegistrationPage";
 
 function App() {
   return (
     <div className={"App"}>
       <Switch>
-        <Route exact path={"/"} render={() => <TestPage/>}/>
+        <Route exact path={"/"} render={() => null}/>
         <Route path={"/login"} render={() => <LoginPage/>}/>
         <Route path={"/newPassword"} render={() => <NewPasswordPage/>}/>
         <Route path={"/passwordRecovery"} render={() => <PasswordRecoveryPage/>}/>
