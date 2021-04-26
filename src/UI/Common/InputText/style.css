@@ -1,0 +1,12 @@
+
+.form-row input[type="text"], .form-row input[type="email"], .form-row textarea {
+    min-width:auto;
+    padding: 0 10px;
+    line-height: 35px;
+    border-width: 0;
+    outline: none;
+    background: transparent url(https://html5book.ru/wp-content/uploads/2016/12/bg-form.png) bottom left repeat-x;
+    background-size: 8px 35px;
+    font-family: 'Playfair Display';
+    margin: 10px;
+}
