@@ -1,17 +1,19 @@
 import {applyMiddleware, combineReducers, compose, createStore} from "redux"
 import thunk from 'redux-thunk'
-import { loginReducer } from "./LoginReducer"
-import { newPasswordReducer } from "./NewPasswordReducer"
-import { passwordRecoveryReducer } from "./PasswordRecoveryReducer"
-import { profileReducer } from "./ProfileReducer"
-import { registrationReducer } from "./RegistrationReducer"
+import {loginReducer} from "./LoginReducer"
+import {newPasswordReducer} from "./NewPasswordReducer"
+import {passwordRecoveryReducer} from "./PasswordRecoveryReducer"
+import {profileReducer} from "./ProfileReducer"
+import {registrationReducer} from "./RegistrationReducer"
+import {userReducer} from "./UserReducer"
 
 let rootReducer = combineReducers({
     login: loginReducer,
     newPassword: newPasswordReducer,
     passwordRecovery: passwordRecoveryReducer,
     profile: profileReducer,
-    registration: registrationReducer
+    registration: registrationReducer,
+    user: userReducer
 })
 
 // @ts-ignore
