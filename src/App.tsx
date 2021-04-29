@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import {Redirect, Route, Switch} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import {LoginPage} from './UI/Login/LoginPage'
 import {PasswordRecoveryPage} from "./UI/PasswordRecovery/PasswordRecoveryPage"
 import {ProfilePage} from "./UI/Profile/ProfilePage"

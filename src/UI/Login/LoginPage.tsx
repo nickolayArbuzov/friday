@@ -6,6 +6,7 @@ import {AppStateType} from "../../BLL/store"
 
 export const LoginPage = () => {
     const dispatch = useDispatch()
+    let isAuth = useSelector<AppStateType>(state => state.login.isAuth)
     let [email, setEmail] = useState("Nickolay@Arbuzov.tech")
     let [password, setPassword] = useState("11111111")
     let [rememberMe, setRememberMe] = useState(false)
@@ -23,6 +24,8 @@ export const LoginPage = () => {
     const onClickHandler = useCallback(() => {
         dispatch(loginTC(email, password, rememberMe))
     },[email, password, rememberMe])
+
+    if(isAuth) return <Redirect to={'/profile'}/>
 
     return (
         <div>

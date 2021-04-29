@@ -1,5 +1,7 @@
-import React from "react";
-import {NavLink} from "react-router-dom";
+import React from "react"
+import {NavLink} from "react-router-dom"
+import {AppStateType} from "../../BLL/store"
+import {useSelector} from "react-redux"
 
 export const routePaths = {
     HOME_PAGE: '/',
@@ -11,16 +13,16 @@ export const routePaths = {
 }
 
 export const NavBar = ()=>{
+    let isAuth = useSelector<AppStateType>(state => state.login.isAuth)
     return(
         <div>
             <div>
-                <NavLink to={routePaths.LOGIN}>Login</NavLink>
+                {isAuth 
+                ? <NavLink to={routePaths.PROFILE}>Profile</NavLink> 
+                : <NavLink to={routePaths.LOGIN}>Login</NavLink>}
             </div>
             <div>
                 <NavLink to={routePaths.REGISTRATION}>Registration</NavLink>
-            </div>
-            <div>
-                <NavLink to={routePaths.PROFILE}>Profile</NavLink>
             </div>
             <div>
                 <NavLink to={routePaths.PASSWORD_RECOVERY}>Recovery pass</NavLink>
