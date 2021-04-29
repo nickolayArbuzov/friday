@@ -1,12 +1,12 @@
-import React from 'react'
-import './App.css'
-import {Route, Switch} from 'react-router-dom'
-import {LoginPage} from './UI/Login/LoginPage'
-import {PasswordRecoveryPage} from "./UI/PasswordRecovery/PasswordRecoveryPage"
-import {ProfilePage} from "./UI/Profile/ProfilePage"
-import {RegistrationPage} from "./UI/Registration/RegistrationPage"
-import {NavBar} from './UI/NavBar/NavBar'
-import {routePaths} from './UI/NavBar/NavBar'
+import React from "react";
+import "./App.css";
+import {Route, Switch} from "react-router-dom";
+import {LoginPage} from "./UI/Login/LoginPage";
+import {PasswordRecoveryPage} from "./UI/PasswordRecovery/PasswordRecoveryPage";
+import {ProfilePage} from "./UI/Profile/ProfilePage";
+import {RegistrationPage} from "./UI/Registration/RegistrationPage";
+import {NavBar} from "./UI/NavBar/NavBar";
+import {routePaths} from "./UI/NavBar/NavBar";
 
 function App() {
   return (

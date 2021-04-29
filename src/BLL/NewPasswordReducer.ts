@@ -5,7 +5,7 @@ const initialState={}
 
 export const newPasswordReducer = (state: InitialStateType = initialState, action: ActionsType): InitialStateType => {
     switch (action) {
-        case '':
+        case "":
             return {...state,}
         default:
             return state

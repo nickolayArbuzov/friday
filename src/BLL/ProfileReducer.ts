@@ -5,7 +5,7 @@ const initialState={}
 
 export const profileReducer = (state: InitialStateType = initialState, action: ActionsType): InitialStateType => {
     switch (action) {
-        case '':
+        case "":
             return {...state,}
         default:
             return state

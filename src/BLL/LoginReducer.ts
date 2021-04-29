@@ -1,21 +1,21 @@
-import {authAPI} from "../DAL/axios"
-import {Dispatch} from "redux"
+import {authAPI} from "../DAL/axios";
+import {Dispatch} from "redux";
 
 const initialState = {
-    email: '',
-    password: '',
+    email: "",
+    password: "",
     rememberMe: false,
-    isAuth: false
+    isAuth: false,
 }
 
 export const loginReducer = (state: InitialStateType = initialState, action: ActionsType): InitialStateType => {
     switch (action.type) {
-        case 'LOGIN/LOGIN':
-            return {...state}
-        case 'LOGIN/CHECK-AUTH':
-            return {...state, isAuth: action.isAuth}
+        case "LOGIN/LOGIN":
+            return {...state};
+        case "LOGIN/CHECK-AUTH":
+            return {...state, isAuth: action.isAuth};
         default:
-            return state
+            return state;
     }
 }
 
@@ -23,8 +23,8 @@ export const loginTC = (email: string, password: string, rememberMe: boolean) =>
     return authAPI.login(email, password, rememberMe)
         .then((res) => {
             if (res) {
-                dispatch(loginAC(email, password, rememberMe)) 
-                dispatch(isAuthAC(true))
+                dispatch(loginAC(email, password, rememberMe));
+                dispatch(isAuthAC(true));
             }
         })
         .catch((error) => {
@@ -41,11 +41,11 @@ export const logoutTC = () => (dispatch: Dispatch) => {
 }
 
 export const loginAC = (email: string, password: string, rememberMe: boolean) =>
-    ({type: "LOGIN/LOGIN", email, password, rememberMe} as const)
-export const isAuthAC = (isAuth: boolean) => ({type: 'LOGIN/CHECK-AUTH', isAuth} as const)
+    ({type: "LOGIN/LOGIN", email, password, rememberMe} as const);
+export const isAuthAC = (isAuth: boolean) => ({type: "LOGIN/CHECK-AUTH", isAuth} as const);
 
-type InitialStateType = typeof initialState
-export type LoginType = ReturnType<typeof loginAC>
-export type IsAuthType = ReturnType<typeof isAuthAC>
+type InitialStateType = typeof initialState;
+export type LoginType = ReturnType<typeof loginAC>;
+export type IsAuthType = ReturnType<typeof isAuthAC>;
 
-type ActionsType = LoginType | IsAuthType
+type ActionsType = LoginType | IsAuthType;
