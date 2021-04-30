@@ -1,6 +1,3 @@
-import {authAPI} from "../DAL/axios";
-import {Dispatch} from "redux";
-
 export type InitialStateType = {
 
 }

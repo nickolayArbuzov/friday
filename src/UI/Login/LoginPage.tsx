@@ -6,7 +6,7 @@ import {AppStateType} from "../../BLL/store";
 
 export const LoginPage = () => {
     const dispatch = useDispatch();
-    let isAuth = useSelector<AppStateType>(state => state.login.isAuth);
+    let isAuth = useSelector<AppStateType>(state => state.auth._id);
     let [email, setEmail] = useState("Nickolay@Arbuzov.tech");
     let [password, setPassword] = useState("11111111");
     let [rememberMe, setRememberMe] = useState(false);

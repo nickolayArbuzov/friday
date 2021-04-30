@@ -6,8 +6,10 @@ import {passwordRecoveryReducer} from "./PasswordRecoveryReducer";
 import {profileReducer} from "./ProfileReducer";
 import {registrationReducer} from "./RegistrationReducer";
 import {userReducer} from "./UserReducer";
+import {authReducer} from "./AuthReducer";
 
 let rootReducer = combineReducers({
+    auth: authReducer,
     login: loginReducer,
     newPassword: newPasswordReducer,
     passwordRecovery: passwordRecoveryReducer,
